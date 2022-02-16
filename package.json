@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/stats-incr-covmat",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Compute an unbiased sample covariance matrix incrementally.",
   "license": "Apache-2.0",
   "author": {
