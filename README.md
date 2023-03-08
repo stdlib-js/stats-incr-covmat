@@ -30,10 +30,14 @@ A [covariance matrix][covariance-matrix] is an M-by-M matrix whose elements spec
 
 <!-- <equation class="equation" label="eq:unbiased_sample_covariance_unknown_means" align="center" raw="\operatorname{cov_{jkn}} = \frac{1}{n-1} \sum_{i=0}^{n-1} (x_{ij} - \bar{x}_{jn})(x_{ik} - \bar{x}_{kn})" alt="Equation for the unbiased sample covariance for unknown population means."> -->
 
-<div class="equation" align="center" data-raw-text="\operatorname{cov_{jkn}} = \frac{1}{n-1} \sum_{i=0}^{n-1} (x_{ij} - \bar{x}_{jn})(x_{ik} - \bar{x}_{kn})" data-equation="eq:unbiased_sample_covariance_unknown_means">
+```math
+\operatorname{cov_{jkn}} = \frac{1}{n-1} \sum_{i=0}^{n-1} (x_{ij} - \bar{x}_{jn})(x_{ik} - \bar{x}_{kn})
+```
+
+<!-- <div class="equation" align="center" data-raw-text="\operatorname{cov_{jkn}} = \frac{1}{n-1} \sum_{i=0}^{n-1} (x_{ij} - \bar{x}_{jn})(x_{ik} - \bar{x}_{kn})" data-equation="eq:unbiased_sample_covariance_unknown_means">
     <img src="https://cdn.jsdelivr.net/gh/stdlib-js/stdlib@49d8cabda84033d55d7b8069f19ee3dd8b8d1496/lib/node_modules/@stdlib/stats/incr/covmat/docs/img/equation_unbiased_sample_covariance_unknown_means.svg" alt="Equation for the unbiased sample covariance for unknown population means.">
     <br>
-</div>
+</div> -->
 
 <!-- </equation> -->
 
@@ -41,10 +45,14 @@ For known population means, the [unbiased sample covariance][covariance-matrix] 
 
 <!-- <equation class="equation" label="eq:unbiased_sample_covariance_known_means" align="center" raw="\operatorname{cov_{jkn}} = \frac{1}{n} \sum_{i=0}^{n-1} (x_{ij} - \mu_{j})(x_{ik} - \mu_{k})" alt="Equation for the unbiased sample covariance for known population means."> -->
 
-<div class="equation" align="center" data-raw-text="\operatorname{cov_{jkn}} = \frac{1}{n} \sum_{i=0}^{n-1} (x_{ij} - \mu_{j})(x_{ik} - \mu_{k})" data-equation="eq:unbiased_sample_covariance_known_means">
+```math
+\operatorname{cov_{jkn}} = \frac{1}{n} \sum_{i=0}^{n-1} (x_{ij} - \mu_{j})(x_{ik} - \mu_{k})
+```
+
+<!-- <div class="equation" align="center" data-raw-text="\operatorname{cov_{jkn}} = \frac{1}{n} \sum_{i=0}^{n-1} (x_{ij} - \mu_{j})(x_{ik} - \mu_{k})" data-equation="eq:unbiased_sample_covariance_known_means">
     <img src="https://cdn.jsdelivr.net/gh/stdlib-js/stdlib@566f739b0d9a5b720546f84f74de841b8d5e0c54/lib/node_modules/@stdlib/stats/incr/covmat/docs/img/equation_unbiased_sample_covariance_known_means.svg" alt="Equation for the unbiased sample covariance for known population means.">
     <br>
-</div>
+</div> -->
 
 <!-- </equation> --> 
 
@@ -52,38 +60,30 @@ For known population means, the [unbiased sample covariance][covariance-matrix] 
 
 <!-- /.intro -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/stats-incr-covmat
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-incrcovmat = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-incr-covmat@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var incrcovmat = require( 'path/to/vendor/umd/stats-incr-covmat/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/stats-incr-covmat@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.incrcovmat;
-})();
-</script>
+var incrcovmat = require( '@stdlib/stats-incr-covmat' );
 ```
 
 #### incrcovmat( out\[, means] )
@@ -190,16 +190,11 @@ out = accumulator();
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-ctor@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/stats-incr-covmat@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var randu = require( '@stdlib/random-base-randu' );
+var ndarray = require( '@stdlib/ndarray-ctor' );
+var Float64Array = require( '@stdlib/array-float64' );
+var incrcovmat = require( '@stdlib/stats-incr-covmat' );
 
 var cov;
 var cxy;
@@ -231,11 +226,6 @@ for ( i = 0; i < 100; i++ ) {
 
     console.log( '[ %d, %d\n  %d, %d ]', vx, cxy, cyx, vy );
 }
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -250,8 +240,8 @@ for ( i = 0; i < 100; i++ ) {
 
 ## See Also
 
--   <span class="package-name">[`@stdlib/stats/incr/covariance`][@stdlib/stats/incr/covariance]</span><span class="delimiter">: </span><span class="description">compute an unbiased sample covariance incrementally.</span>
--   <span class="package-name">[`@stdlib/stats/incr/pcorrmat`][@stdlib/stats/incr/pcorrmat]</span><span class="delimiter">: </span><span class="description">compute a sample Pearson product-moment correlation matrix incrementally.</span>
+-   <span class="package-name">[`@stdlib/stats-incr/covariance`][@stdlib/stats/incr/covariance]</span><span class="delimiter">: </span><span class="description">compute an unbiased sample covariance incrementally.</span>
+-   <span class="package-name">[`@stdlib/stats-incr/pcorrmat`][@stdlib/stats/incr/pcorrmat]</span><span class="delimiter">: </span><span class="description">compute a sample Pearson product-moment correlation matrix incrementally.</span>
 
 </section>
 
@@ -310,7 +300,7 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 -->
 
 [chat-image]: https://img.shields.io/gitter/room/stdlib-js/stdlib.svg
-[chat-url]: https://gitter.im/stdlib-js/stdlib/
+[chat-url]: https://app.gitter.im/#/room/#stdlib-js_stdlib:gitter.im
 
 [stdlib]: https://github.com/stdlib-js/stdlib
 
@@ -328,13 +318,13 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 [covariance-matrix]: https://en.wikipedia.org/wiki/Covariance_matrix
 
-[@stdlib/ndarray/ctor]: https://github.com/stdlib-js/ndarray-ctor/tree/umd
+[@stdlib/ndarray/ctor]: https://github.com/stdlib-js/ndarray-ctor
 
 <!-- <related-links> -->
 
-[@stdlib/stats/incr/covariance]: https://github.com/stdlib-js/stats-incr-covariance/tree/umd
+[@stdlib/stats/incr/covariance]: https://github.com/stdlib-js/stats-incr-covariance
 
-[@stdlib/stats/incr/pcorrmat]: https://github.com/stdlib-js/stats-incr-pcorrmat/tree/umd
+[@stdlib/stats/incr/pcorrmat]: https://github.com/stdlib-js/stats-incr-pcorrmat
 
 <!-- </related-links> -->
 
