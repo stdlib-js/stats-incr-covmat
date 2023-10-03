@@ -1,7 +1,7 @@
-/**
+/*
 * @license Apache-2.0
 *
-* Copyright (c) 2018 The Stdlib Authors.
+* Copyright (c) 2021 The Stdlib Authors.
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -16,17 +16,35 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
+
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@main/index.d.ts"/>
+
+import { ndarray } from '@stdlib/types/ndarray';
 
 /**
-* Compute an unbiased sample covariance matrix incrementally.
+* If provided a data vector, the accumulator function returns an updated unbiased sample covariance matrix. If not provided a data vector, the accumulator function returns the current unbiased sample covariance matrix.
 *
-* @module @stdlib/stats-incr-covmat
+* @param vector - data vector
+* @throws must provide a 1-dimensional ndarray
+* @throws vector length must match covariance matrix dimensions
+* @returns unbiased sample covariance matrix or null
+*/
+type accumulator = ( vector?: ndarray ) => ndarray | null;
+
+/**
+* Returns an accumulator function which incrementally computes an unbiased sample covariance matrix.
+*
+* @param out - order of the covariance matrix or a square 2-dimensional output ndarray for storing the covariance matrix
+* @param means - mean values
+* @throws first argument must be either a positive integer or a 2-dimensional ndarray having equal dimensions
+* @throws second argument must be a 1-dimensional ndarray
+* @throws number of means must match covariance matrix dimensions
+* @returns accumulator function
 *
 * @example
-* var Float64Array = require( '@stdlib/array-float64' );
-* var ndarray = require( '@stdlib/ndarray-ctor' );
-* var incrcovmat = require( '@stdlib/stats-incr-covmat' );
+* var Float64Array = require( `@stdlib/array/float64` );
+* var ndarray = require( `@stdlib/ndarray/ctor` );
 *
 * // Create an output covariance matrix:
 * var buffer = new Float64Array( 4 );
@@ -70,12 +88,9 @@
 * out = accumulator();
 * // returns <ndarray>
 */
-
-// MODULES //
-
-var main = require( './main.js' );
+declare function incrcovmat( out: number | ndarray, means?: ndarray ): accumulator; // tslint-disable-line max-line-length
 
 
 // EXPORTS //
 
-module.exports = main;
+export = incrcovmat;
