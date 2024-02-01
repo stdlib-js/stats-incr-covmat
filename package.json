@@ -44,7 +44,7 @@
     "@stdlib/ndarray-base-ctor": "^0.1.0",
     "@stdlib/ndarray-base-numel": "^0.1.1",
     "@stdlib/ndarray-ctor": "^0.1.0",
-    "@stdlib/string-format": "^0.1.1",
+    "@stdlib/error-tools-fmtprodmsg": "^0.1.1",
     "@stdlib/types": "^0.2.0"
   },
   "devDependencies": {
