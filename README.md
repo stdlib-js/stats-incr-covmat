@@ -78,6 +78,11 @@ For known population means, the [unbiased sample covariance][covariance-matrix] 
 ## Usage
 
 ```javascript
+import incrcovmat from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-incr-covmat@esm/index.mjs';
+```
+The previous example will load the latest bundled code from the esm branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/stats-incr-covmat/tags). For example,
+
+```javascript
 import incrcovmat from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-incr-covmat@v0.2.0-esm/index.mjs';
 ```
 
@@ -194,7 +199,7 @@ out = accumulator();
 import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@esm/index.mjs';
 import ndarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-ctor@esm/index.mjs';
 import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
-import incrcovmat from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-incr-covmat@v0.2.0-esm/index.mjs';
+import incrcovmat from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-incr-covmat@esm/index.mjs';
 
 var cov;
 var cxy;
