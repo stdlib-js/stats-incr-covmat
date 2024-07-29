@@ -78,6 +78,11 @@ For known population means, the [unbiased sample covariance][covariance-matrix] 
 ## Usage
 
 ```javascript
+import incrcovmat from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-incr-covmat@deno/mod.js';
+```
+The previous example will load the latest bundled code from the deno branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/stats-incr-covmat/tags). For example,
+
+```javascript
 import incrcovmat from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-incr-covmat@v0.2.2-deno/mod.js';
 ```
 
@@ -189,7 +194,7 @@ out = accumulator();
 import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@deno/mod.js';
 import ndarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-ctor@deno/mod.js';
 import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@deno/mod.js';
-import incrcovmat from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-incr-covmat@v0.2.2-deno/mod.js';
+import incrcovmat from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-incr-covmat@deno/mod.js';
 
 var cov;
 var cxy;
