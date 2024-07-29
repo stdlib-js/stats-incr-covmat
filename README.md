@@ -78,7 +78,7 @@ For known population means, the [unbiased sample covariance][covariance-matrix] 
 ## Usage
 
 ```javascript
-import incrcovmat from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-incr-covmat@esm/index.mjs';
+import incrcovmat from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-incr-covmat@v0.2.2-esm/index.mjs';
 ```
 
 #### incrcovmat( out\[, means] )
@@ -194,7 +194,7 @@ out = accumulator();
 import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@esm/index.mjs';
 import ndarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-ctor@esm/index.mjs';
 import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
-import incrcovmat from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-incr-covmat@esm/index.mjs';
+import incrcovmat from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-incr-covmat@v0.2.2-esm/index.mjs';
 
 var cov;
 var cxy;
