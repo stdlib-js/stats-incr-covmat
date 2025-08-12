@@ -65,7 +65,7 @@ For known population means, the [unbiased sample covariance][covariance-matrix] 
     <br>
 </div> -->
 
-<!-- </equation> --> 
+<!-- </equation> -->
 
 </section>
 
