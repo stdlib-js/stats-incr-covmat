@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/stats-incr-covmat",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Compute an unbiased sample covariance matrix incrementally.",
   "license": "Apache-2.0",
   "author": {
@@ -37,26 +37,26 @@
     "url": "https://github.com/stdlib-js/stdlib/issues"
   },
   "dependencies": {
-    "@stdlib/array-float64": "^0.2.2",
-    "@stdlib/assert-is-positive-integer": "^0.2.2",
+    "@stdlib/array-float64": "^0.2.3",
+    "@stdlib/assert-is-positive-integer": "^0.2.3",
     "@stdlib/assert-is-square-matrix": "^0.2.2",
-    "@stdlib/assert-is-vector-like": "^0.2.2",
-    "@stdlib/ndarray-base-ctor": "^0.2.2",
-    "@stdlib/ndarray-base-numel": "^0.2.2",
-    "@stdlib/ndarray-ctor": "^0.2.2",
-    "@stdlib/string-format": "^0.2.2",
+    "@stdlib/assert-is-vector-like": "^0.2.3",
+    "@stdlib/ndarray-base-ctor": "^0.3.1",
+    "@stdlib/ndarray-base-numel": "^0.2.3",
+    "@stdlib/ndarray-ctor": "^0.3.1",
+    "@stdlib/string-format": "^0.2.3",
     "@stdlib/types": "^0.4.3",
-    "@stdlib/error-tools-fmtprodmsg": "^0.2.2"
+    "@stdlib/error-tools-fmtprodmsg": "^0.2.3"
   },
   "devDependencies": {
     "@stdlib/assert-is-symmetric-matrix": "^0.2.2",
-    "@stdlib/constants-float64-eps": "^0.2.2",
-    "@stdlib/math-base-special-abs": "^0.2.2",
-    "@stdlib/random-base-randu": "^0.2.2",
+    "@stdlib/constants-float64-eps": "^0.2.3",
+    "@stdlib/math-base-special-abs": "^0.2.3",
+    "@stdlib/random-base-randu": "^0.2.3",
     "tape": "git+https://github.com/kgryte/tape.git#fix/globby",
     "istanbul": "^0.4.1",
     "tap-min": "git+https://github.com/Planeshifter/tap-min.git",
-    "@stdlib/bench-harness": "^0.2.2"
+    "@stdlib/bench-harness": "^0.2.3"
   },
   "engines": {
     "node": ">=0.10.0",
